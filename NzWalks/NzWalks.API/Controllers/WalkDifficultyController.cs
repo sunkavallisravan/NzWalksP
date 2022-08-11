@@ -40,10 +40,10 @@ namespace NzWalks.API.Controllers
         public async Task<IActionResult> AddWalkDifficultyAsync([FromBody] Models.DTO.AddWalkDifficultyRequest addWalkDifficultyRequest)
         {
 
-            if (!ValidateAddwalkDifficultyAsync(addWalkDifficultyRequest))
-            {
-                return BadRequest(ModelState); 
-            }
+            //if (!ValidateAddwalkDifficultyAsync(addWalkDifficultyRequest))
+            //{
+            //    return BadRequest(ModelState); 
+            //}
 
             // convert dto to domine object
             var WalkDifficultyDomine = new Models.Domain.WalkDifficulty
@@ -76,10 +76,10 @@ namespace NzWalks.API.Controllers
         [Route("{id:guid}")]
         public async Task<IActionResult> UpdateWalkDifficultyAsync([FromRoute] Guid id, [FromBody] Models.DTO.UpdateWalkDifficultyRequest updateWalkDifficultyRequest)
         {
-            if (!ValidateUpdatewalkDifficultyAsync(updateWalkDifficultyRequest))
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ValidateUpdatewalkDifficultyAsync(updateWalkDifficultyRequest))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             // requestdto to domine model
             var WalkDifficultyDomine = new Models.Domain.WalkDifficulty()

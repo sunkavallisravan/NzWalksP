@@ -92,10 +92,10 @@ namespace NzWalks.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AddRegionAsync(Models.DTO.AddRegionRequest addRegionRequest)
         {
-            if (!ValidateAddRegionAsync(addRegionRequest))
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ValidateAddRegionAsync(addRegionRequest))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             // requestdto to domine model
             var region = new Models.Domain.Region()
@@ -151,10 +151,10 @@ namespace NzWalks.API.Controllers
         {
 
 
-            if (!ValidateUpdateRegionAsync(updateRegionRequest))
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ValidateUpdateRegionAsync(updateRegionRequest))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             // requestdto to domine model
             var region = new Models.Domain.Region()
@@ -186,7 +186,6 @@ namespace NzWalks.API.Controllers
 
             return Ok(regionDto);
         }
-
 
 
         #region Private Method
